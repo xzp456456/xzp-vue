@@ -1,7 +1,7 @@
 export const increment = state => {
-    state.count = state.count + 5
-  }
+  state.count = state.count + 5
+}
 
-  export const loginAjax = state => {
-        
-  }
+export const loginAjax = state => {
+
+}

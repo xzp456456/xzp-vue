@@ -58,7 +58,7 @@
 				</div>
 			</div>
 			<div class="item">
-				<div class="list">
+				<div class="list" @click="add()">
 				<div class="listImg"><img src="../assets/img/1.png"/></div>
 					<p>我的设备</p>
 				</div>
@@ -82,10 +82,16 @@
 <script>
 import { getAjax,postAjax } from '../api/axios'
 import footer from '../components/footer'
+import * as types from '../vuex/types'
 export default {
 	name:'index',
 	components:{
 		'v-footer':footer
+	},
+	methods:{
+		add(){
+			this.$store.dispatch(types.HTTP_COUNTER);
+		}
 	}
 }
 </script>
