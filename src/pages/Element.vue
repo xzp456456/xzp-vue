@@ -72,9 +72,7 @@
 			</div>
 		</header>
 		<main>
-			<div class="btn">
-				<button>申请更换滤芯</button>
-			</div>
+			<Btn btnName="申请更换滤芯" @actionClick="add"></Btn>
 			<div class="text_title">
 				滤芯
 			</div>
@@ -103,8 +101,17 @@
 </template>
 
 <script>
+import Btn from '../components/btn'
 export default {
-    name:'Element'
+	name:'Element',
+	components:{
+		Btn
+	},
+	methods:{
+		add(){
+			console.log(1);
+		}
+	}
 }
 </script>
 

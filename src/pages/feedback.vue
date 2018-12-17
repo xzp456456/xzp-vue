@@ -12,14 +12,15 @@
 				<textarea name="" rows="" cols="" placeholder="请描述您的问题，或者您有更好的建议！"></textarea>
 			</div>
 		</div>
-		<div class="btn">
-			<button>提交</button>
-		</div>
+		<Btn btnName="提交"></Btn>
     </div>
 </template>
 <script>
+import Btn from '../components/btn'
 export default {
-    
+    components:{
+		Btn
+	}
 }
 </script>
 <style scoped="">

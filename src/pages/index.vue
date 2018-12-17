@@ -76,39 +76,16 @@
 				</div>
 			</div>
 		</main>
-		<footer>
-			<div class="footer">
-				<div class="item_home" @click="add()">
-					<div><img src="../assets/img/home.png"/></div>
-					<p>首页</p>
-				</div>
-				<div class="item_home">
-					<div><img src="../assets/img/w.png"/></div>
-					<p>设备</p>
-				</div>
-			</div>
-		</footer>
+		<v-footer></v-footer>
     </div>
 </template>
 <script>
 import { getAjax,postAjax } from '../api/axios'
+import footer from '../components/footer'
 export default {
 	name:'index',
-	created(){
-		getAjax('api/user/getUserInfo',{uid:1})
-		.then((res)=>{
-			console.log(res);
-		})
-	},
-	computed:{
-
-	},
-	methods:{
-		add(){
-			this.$store.getters.increment;
-			this.$store.dispatch('increment');
-			console.log(this.$store.state.count);
-		}
+	components:{
+		'v-footer':footer
 	}
 }
 </script>
@@ -290,32 +267,13 @@ main .item .list{
 	text-align: center;
 }
 
-/* main .item .listImg{
-	width:0.83rem;
-	height:0.77rem;
+main .item .listImg{
+	width:0.8rem;
+	height:1rem;
 	margin: 0 auto;
 }
 main .item .listImg img{
 	width: 100%;
-} */
-
-
-footer{
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	height:1.57rem;
-	box-shadow:0rem 0rem 0rem 0rem rgba(230,230,230,1);
-	    border-top: 1px solid #E6E6E6;
 }
-
-footer .item_home{
-	padding-top: 0.3rem;
-	width: 50%;
-	float: left;
-	text-align: center;
-	
-}
-
 
 </style>
