@@ -4,5 +4,5 @@ const prodEnv = require('./prod.env')
 
 module.exports = merge(prodEnv, {
   NODE_ENV: '"development"',
-  HTTP_URL:'"http://www.tp5.com"' //线下地址
+  HTTP_URL:'"http://jsq.yxsoft.net"' //线下地址
 })

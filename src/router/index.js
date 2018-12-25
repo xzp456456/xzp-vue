@@ -1,110 +1,158 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import addEquipment from '@/pages/addEquipment'
-import distributor from '@/pages/distributor'
-import Element from '@/pages/Element'
-import equipment from '@/pages/equipment'
-import feedback from '@/pages/feedback'
-import index from '@/pages/index'
-import myInfo from '@/pages/myInfo'
-import order from '@/pages/order'
-import recharge from '@/pages/recharge'
-import record from '@/pages/record'
-import repair from '@/pages/repair'
-import roll from '@/pages/roll'
-import self from '@/pages/self'
-import shareGift from '@/pages/shareGift'
-import suggestion from '@/pages/suggestion'
-import Waterrecords from '@/pages/Waterrecords'
-import wd from '@/pages/wd'
+import announce from '../pages/draw/announce'
+import breakdown from '../pages/break/breakdown'
+import breakInfo from '../pages/break/breakInfo'
+import cashRecord from '../pages/equip/cashRecord'
+import charts from '../pages/equip/charts'
+import commission from '../pages/draw/commission'
+import company from '../pages/equip/company'
+import cumulative from '../pages/equip/cumulative'
+import deliver from '../pages/equip/deliver'
+import details from '../pages/draw/details'
+import draw from '../pages/draw/draw';
+import equipInfo from '../pages/equip/equipInfo'
+import equipList from '../pages/equip/equipList'
+import Installed from '../pages/equip/Installed'
+import login from '../pages/user/login'
+import orderInfo from '../pages/equip/orderInfo'
+import outstanding from '../pages/draw/outstanding'
+import reset from '../pages/user/reset'
+import searchPassword from '../pages/user/searchPassword'
+import stock from '../pages/equip/stock'
+import team from '../pages/team/team'
+import teamInfo from '../pages/team/teamInfo'
+import teamOrder from '../pages/team/teamOrder'
 Vue.use(Router)
+
+
 
 export default new Router({
   routes: [
     {
+      path: '/announce',
+      component: announce,
+      name: 'announce',
+      meta: {
+        title: '首页入口'
+      }
+    },
+    {
+      path: '/breakdown',
+      component: breakdown,
+      name: 'breakdown'
+    },
+    {
+      path: '/breakInfo',
+      component: breakInfo,
+      name: 'breakInfo'
+    },
+    {
+      path: '/cashRecord',
+      component: cashRecord,
+      name: 'cashRecord'
+    },
+    {
+      path: '/charts',
+      component: charts,
+      name: 'charts'
+    },
+    {
+      path: '/commission',
+      component: commission,
+      name: 'commission'
+    },
+    {
       path: '/',
-      name: 'index',
-      component: index
+      component: company,
+      name: 'company'
     },
     {
-      path: '/addEquipment',
-      name: 'addEquipment',
-      component: addEquipment
+      path: '/cumulative',
+      component: cumulative,
+      name: 'cumulative'
     },
     {
-      path: '/distributor',
-      name: 'distributor',
-      component: distributor
+      path: '/deliver',
+      component: deliver,
+      name: 'deliver'
     },
     {
-      path: '/element',
-      name: 'element',
-      component: Element
+      path: '/details',
+      component: details,
+      name: 'details'
     },
     {
-      path: '/equipment',
-      name: 'equipment',
-      component: equipment
+      path: '/draw',
+      component: draw,
+      name: 'draw'
     },
     {
-      path: '/feedback',
-      name: 'feedback',
-      component: feedback
+      path: '/equipInfo',
+      component: equipInfo,
+      name: 'equipInfo'
     },
     {
-      path: '/myInfo',
-      name: 'myInfo',
-      component: myInfo
+      path: '/equipList',
+      component: equipList,
+      name: 'equipList'
     },
     {
-      path: '/order',
-      name: 'order',
-      component: order
+      path: '/Installed',
+      component: Installed,
+      name: 'Installed'
     },
     {
-      path: '/recharge',
-      name: 'recharge',
-      component: recharge
+      path: '/login',
+      component: login,
+      name: 'login'
     },
     {
-      path: '/record',
-      name: 'record',
-      component: record
+      path: '/orderInfo',
+      component: orderInfo,
+      name: 'orderInfo'
     },
     {
-      path: '/repair',
-      name: 'repair',
-      component: repair
+      path: '/outstanding',
+      component: outstanding,
+      name: 'outstanding'
     },
     {
-      path: '/roll',
-      name: 'roll',
-      component: roll
+      path: '/reset',
+      component: reset,
+      name: 'reset'
     },
     {
-      path: '/self',
-      name: 'self',
-      component: self
+      path: '/reset',
+      component: reset,
+      name: 'reset'
     },
     {
-      path: '/shareGift',
-      name: 'shareGift',
-      component: shareGift
+      path: '/searchPassword',
+      component: searchPassword,
+      name: 'searchPassword'
     },
     {
-      path: '/suggestion',
-      name: 'suggestion',
-      component: suggestion
+      path: '/stock',
+      component: stock,
+      name: 'stock'
     },
     {
-      path: '/Waterrecords',
-      name: 'Waterrecords',
-      component: Waterrecords
+      path: '/team',
+      component: team,
+      name: 'team'
     },
     {
-      path: '/wd',
-      name: 'wd',
-      component: wd
+      path: '/teamInfo',
+      component: teamInfo,
+      name: 'teamInfo'
+    },
+    {
+      path: '/teamOrder',
+      component: teamOrder,
+      name: 'teamOrder'
     }
   ]
 })
+
+

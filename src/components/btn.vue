@@ -6,7 +6,7 @@
 <script>
 export default {
     name:'btn',
-    props:['btnName','ms'],
+    props:['btnName'],
     methods:{
         methodClick(){
             this.$emit('actionClick');
